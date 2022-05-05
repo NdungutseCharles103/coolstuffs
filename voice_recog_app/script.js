@@ -8,14 +8,14 @@ recognition.onstart = () =>{
     console.log('vioce is activated, you can come close to mic');
 };
 
-recognition.onresult = (event)=>{
+recognition.onresult = function(event){
     console.log(event);
 
-    const current = event.resultIndex;
-    const transcript = event.results[current][0].transcript;
-    content.textContent = transcript;
+    // const current = event.resultIndex;
+    // const transcript = event.results[current][0].transcript;
+    // content.textContent = transcript;
 
-    readOutLoud(transcript)
+    // readOutLoud(transcript)
 };
 
 btn.addEventListener('click', () =>{
@@ -43,3 +43,26 @@ function readOutLoud(message) {
 }
 
 // readOutLoud('Hey user.');
+
+// var synth = window.speechSynthesis;
+// var voices = synth.getVoices();
+
+// var inputForm = document.querySelector('form');
+// var inputTxt = document.querySelector('input');
+// var voiceSelect = document.querySelector('select');
+
+// for(var i = 0; i < voices.length; i++) {
+//   var option = document.createElement('option');
+//   option.textContent = voices[i].name + ' (' + voices[i].lang + ')';
+//   option.value = i;
+//   voiceSelect.appendChild(option);
+// }
+
+// inputForm.onsubmit = function(event) {
+//   event.preventDefault();
+
+//   var utterThis = new SpeechSynthesisUtterance(inputTxt.value);
+//   utterThis.voice = voices[voiceSelect.value];
+//   synth.speak(utterThis);
+//   inputTxt.blur();
+// }

@@ -1,0 +1,38 @@
+body{
+    background-color: rgb(4, 5, 27);
+}
+
+.main{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transform: translate(-50%, -50%);
+}
+button{
+    margin-bottom: 10px;
+    cursor: pointer;
+    width: 10%;
+}
+.cont{
+    width: 500px;
+    height: 70vh;
+    background-color: rgb(109, 108, 115);
+    display: grid;
+    grid-template-columns: repeat(25, 1fr);
+}
+.cont div{
+    background-color: rgba(240, 252, 255, 0.233);
+}
+.block{
+    background-color: blue!important;
+}
+.light {
+    background-color: aliceblue!important;
+}
+.move{
+    animation-name: movetopright;
+    animation-iteration-count: infinite;
+}

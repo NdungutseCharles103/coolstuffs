@@ -1,0 +1,14 @@
+{
+  "devDependencies": {
+    "typescript": "^4.6.3"
+  },
+  "name": "todo_typescript",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "tsc --watch"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
