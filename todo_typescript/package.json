@@ -6,7 +6,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "start": "tsc --watch"
+    "start": "tsc --watch ./src/index.ts --module es6 -outDir dist"
   },
   "author": "",
   "license": "ISC",

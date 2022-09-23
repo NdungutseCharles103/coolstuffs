@@ -1,0 +1,16 @@
+body{
+    background: black;
+}
+
+#canvas1{
+    background: blue;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    border: 5px solid white;
+}
+
+#playerImage, #backgroundImage, #enemyImage{
+    display: none;
+}
