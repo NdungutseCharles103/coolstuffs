@@ -4,4 +4,7 @@ function telephoneCheck(str) {
   return re.test(str);
 }
 
-telephoneCheck("555-555-5555");
+const result = telephoneCheck("555-555-5555");
+console.log(result);
+
+module.exports = telephoneCheck;

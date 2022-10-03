@@ -23,3 +23,5 @@ function rot13(input) {
    return rotstr.toUpperCase();
 }
 console.log(rot13('SERR CVMMN!'))
+
+module.exports = rot13
