@@ -40,3 +40,17 @@ input:focus{
 #addButton{
 
 }
+
+.draggable{
+    height: 20vh;
+    width: 10vw;
+    cursor: pointer;
+    background-color: blue;
+}
+
+.droppable{height: 40vh;
+    width: 40vw;
+    margin-top: 4vh;
+    cursor: pointer;
+    background-color: blue;
+}
