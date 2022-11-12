@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="zoom">
+        <img
+            src="https://assets.khelnow.com/news/uploads/2022/05/183-Khel-Now-13-copy-1200x600.jpg">
+    </div>
+</body>
+
+<script>
+    const zoomElement = document.querySelector( ".zoom" );
+        let zoom = 1;
+        const ZOOM_SPEED = 0.01;
+
+        document.addEventListener( "wheel", function ( e ) {
+            console.log(e.deltaY);
+            if ( e.deltaY > 0 ) {
+                zoomElement.style.transform = `scale(${ zoom -= ZOOM_SPEED })`;
+            } else {
+                zoomElement.style.transform = `scale(${ zoom += ZOOM_SPEED })`;
+                // e.deltaY = 0;
+            }
+
+        } );
+</script>
+
+</html>
