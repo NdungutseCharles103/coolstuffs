@@ -1,26 +1,27 @@
-const btn = document.querySelector('.talk');
-const content = document.querySelector('.content');
+const btn = document.querySelector(".talk");
+const content = document.querySelector(".content");
 
-const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+const SpeechRecognition =
+	window.SpeechRecognition || window.webkitSpeechRecognition;
 const recognition = new SpeechRecognition();
 
-recognition.onstart = () =>{
-    console.log('vioce is activated, you can come close to mic');
+recognition.onstart = () => {
+	console.log("vioce is activated, you can come close to mic");
 };
 
-recognition.onresult = function(event){
-    console.log(event);
+recognition.onresult = function (event) {
+	console.log(event);
 
-    // const current = event.resultIndex;
-    // const transcript = event.results[current][0].transcript;
-    // content.textContent = transcript;
+	// const current = event.resultIndex;
+	// const transcript = event.results[current][0].transcript;
+	// content.textContent = transcript;
 
-    // readOutLoud(transcript)
+	// readOutLoud(transcript)
 };
 
-btn.addEventListener('click', () =>{
-    recognition.start();
-
+btn.addEventListener("click", () => {
+	// recognition.start();
+	readOutLoud("Hey user. Do you mind to use me in different cool apps. Urakoze.");
 });
 
 // btn.onkeypress = (e) =>{
@@ -33,16 +34,14 @@ btn.addEventListener('click', () =>{
 // }
 
 function readOutLoud(message) {
-    const speech = new SpeechSynthesisUtterance();
-    speech.text = message;
-    speech.volume = 1;
-    speech.rate = 1;
-    speech.pitch = 1;
+	const speech = new SpeechSynthesisUtterance();
+	speech.text = message;
+	speech.volume = 1;
+	speech.rate = 1;
+	speech.pitch = 1;
 
-    window.speechSynthesis.speak()
+	window.speechSynthesis.speak(speech);
 }
-
-// readOutLoud('Hey user.');
 
 // var synth = window.speechSynthesis;
 // var voices = synth.getVoices();
